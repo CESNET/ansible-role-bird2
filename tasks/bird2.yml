@@ -1,0 +1,13 @@
+- name: Ensure bird2 is installed
+  ansible.builtin.apt:
+    name: bird2
+    state: present
+
+- name: Install bird2 configuration file
+  ansible.builtin.template:
+    src: "{{ bird2_configuration_file }}"
+    dest: /etc/bird/bird.conf
+    owner: bird
+    group: bird
+    mode: 400
+  notify: Reload bird

@@ -1,0 +1,4 @@
+---
+- import_tasks: bird2.yml
+  tags:
+    - bird2
