@@ -1,4 +1,9 @@
 ---
-- import_tasks: bird2.yml
+- ansible.builtin.import_tasks: bird2.yml
   tags:
     - bird2
+- ansible.builtin.import_tasks: bird2_monitor_script.yml
+  tags:
+    - bird2
+    - bird2_monitor
+  when: bird2_monitor_script is defined

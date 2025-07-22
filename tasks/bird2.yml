@@ -9,5 +9,5 @@
     dest: /etc/bird/bird.conf
     owner: bird
     group: bird
-    mode: 400
+    mode: 0400
   notify: Reload bird

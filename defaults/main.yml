@@ -1,3 +1,4 @@
 ---
 # defaults file for ansible-role-bird2
 bird2_configuration_file: "files/{{ inventory_hostname }}/bird/bird.conf"
+# bird2_monitor_script: /usr/local/bin/bird2-monitor.py
