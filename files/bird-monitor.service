@@ -1,7 +1,6 @@
 [Unit]
 Description=Monitor and control bird
-After=patroni.service
-Wants=patroni.service
+After=network.target
 
 [Service]
 ExecStart=/usr/local/bin/bird_monitor_script
@@ -9,3 +8,6 @@ User=bird-monitor
 Group=bird
 Type=simple
 Restart=always
+
+[Install]
+WantedBy=network.target
