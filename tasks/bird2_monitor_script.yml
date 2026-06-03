@@ -4,6 +4,8 @@
     group: bird
     system: true
     state: present
+    shell: /usr/sbin/nologin
+    create_home: false
 
 - name: birdcl utility is present
   ansible.builtin.file:
